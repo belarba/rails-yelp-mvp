@@ -1,0 +1,13 @@
+<div class="col-sm-4 offset-4 mt-3">
+  <h1 class="text-center">Resturants</h1>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class='list-group-item d-flex justify-content-between'>
+        <%= restaurant.name %>
+        <%= link_to 'See details', restaurant_path(restaurant.id), class: 'btn btn-primary btn-sm' %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Create', new_restaurant_path, class: 'btn btn-success btn-block' %>
+</div>
+
